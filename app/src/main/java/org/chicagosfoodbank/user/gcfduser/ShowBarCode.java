@@ -40,4 +40,8 @@ public class ShowBarCode extends AppCompatActivity {
     public void sendMessage(View view) {
         startActivity(new Intent(this, RatingActivity.class));
     }
+
+    public void redeem(View view) {
+        startActivity(new Intent(this, RewardsActivity.class));
+    }
 }

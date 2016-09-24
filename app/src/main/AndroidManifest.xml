@@ -19,6 +19,10 @@
         <activity
             android:name=".AdminActivity"
             android:label="@string/title_activity_admin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RewardsActivity"
+            android:label="@string/title_activity_rewards"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
