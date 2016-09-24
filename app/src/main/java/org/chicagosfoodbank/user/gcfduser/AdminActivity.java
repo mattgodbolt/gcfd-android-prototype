@@ -18,13 +18,16 @@ public class AdminActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
-        new IntentIntegrator(this).initiateScan();
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanResult != null) {
-            Toast.makeText(this, "Scan ok: " + scanResult.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Scan results: " + scanResult.toString(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void scan(View view) {
+        new IntentIntegrator(this).initiateScan();
     }
 }
