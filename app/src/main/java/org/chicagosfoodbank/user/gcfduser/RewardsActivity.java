@@ -21,11 +21,11 @@ public class RewardsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rewards);
 
         final ArrayList<String> list = new ArrayList<String>();
-        Collections.addAll(list, "PokeCoins", "iTunes $10");
+        Collections.addAll(list, "PokeCoins", "iTunes $10", "Starbucks $5");
 
         ListView rewardsList = (ListView) findViewById(R.id.rewards_list);
         final ArrayAdapter adapter = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, list);
+                R.layout.reward_item, R.id.reward_name, list);
         rewardsList.setAdapter(adapter);
     }
 
